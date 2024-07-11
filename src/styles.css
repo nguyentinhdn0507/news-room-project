@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card,
+  .horizontal_card {
+    @apply max-w-[70ch] rounded-lg border border-white m-4;
+  }
+
+  .horizontal_card {
+    @apply flex;
+  }
+
+  .horizontal_card img {
+    @apply w-[100px] object-cover;
+  }
+
+  .card .card_content,
+  .horizontal_card .card_content {
+    @apply p-4 bg-white text-gray-400;
+  }
+
+  .horizontal_card .card_content {
+    @apply max-h-[150px];
+  }
+
+  .card .card_content h2,
+  .horizontal_card .card_content h2 {
+    @apply text-black text-lg line-clamp-2;
+  }
+
+  .card .card_content a,
+  .horizontal_card .card_content a {
+    @apply text-red-500;
+  }
+
+  .link {
+    @apply border-b border-blue-700 text-blue-700 hover:border-b-2 hover:border-blue-400 hover:text-blue-500;
+  }
+}
+
+@layer base {
+  :root {
+    --color-primary: 255 115 179;
+    --color-secondary: 111 114 185;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+  }
+}
+.slider-fourth {
+  width: calc(100% + 1rem);
+}
+.slider-fourth .slick-slide {
+  @apply pr-4;
+}
+.slider-fourth button:last-child {
+  right: calc(25px + 1rem);
+}
